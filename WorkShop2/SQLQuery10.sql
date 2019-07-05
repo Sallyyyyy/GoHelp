@@ -1,4 +1,5 @@
-
+USE GSSWEB
+GO
 /*確認要刪除的條件和刪除的物件相符合*/
 SELECT *
 FROM dbo.BOOK_LEND_RECORD

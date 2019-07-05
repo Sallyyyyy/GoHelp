@@ -1,3 +1,5 @@
+USE GSSWEB
+GO
 SELECT Top 5 BLR.BOOK_ID as [BookId],BD.BOOK_NAME as [BookName],Count(*) as [Qty]
 FROM dbo.BOOK_LEND_RECORD as BLR
 INNER JOIN dbo.BOOK_DATA as BD

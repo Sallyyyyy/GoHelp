@@ -1,4 +1,5 @@
-
+USE GSSWEB
+GO
 CREATE FUNCTION dbo.getCNT (@yy nvarchar(10))  
 RETURNS TABLE  
 AS  
