@@ -1,15 +1,14 @@
 USE GSSWEB
 GO
---變數IN
+--DECLARE @ColumnGroup
 DECLARE @ColumnGroup NVARCHAR(MAX)
 SELECT @ColumnGroup = COALESCE(@ColumnGroup + ',' ,'' ) + QUOTENAME(CONVERT(NVARCHAR, A.year)) 
 FROM (
 	SELECT DISTINCT DATEPART(YEAR,BLR.LEND_DATE) as [year]
 	FROM dbo.BOOK_LEND_RECORD as BLR) AS A
 GROUP BY A.year
---變數SELECT
+--DECLARE @ColumnSelect
 DECLARE @ColumnSelect NVARCHAR(MAX)  = ''
---SELECT @ColumnSelect += COALESCE(',ISNULL(['+CONVERT(NVARCHAR, A.year) + '],0) as CNT','')
 SELECT @ColumnSelect += COALESCE(',ISNULL(['+CONVERT(NVARCHAR, A.year) + '],0) as CNT' + CONVERT(NVARCHAR, A.year),'') 
 FROM (
 	SELECT DISTINCT BD.BOOK_CLASS_ID as [ClassID],BC.BOOK_CLASS_NAME as [ClassName],
