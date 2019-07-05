@@ -10,7 +10,7 @@ GROUP BY A.year
 
 --DECLARE @ColumnSelect
 DECLARE @ColumnSelect NVARCHAR(MAX)  = ''
-SELECT @ColumnSelect += COALESCE(',ISNULL(['+CONVERT(NVARCHAR, A.year) + '],0) as CNT' + CONVERT(NVARCHAR, A.year),'') 
+SELECT @ColumnSelect += ',ISNULL(['+CONVERT(NVARCHAR, A.year) + '],0) as CNT' + CONVERT(NVARCHAR, A.year)
 FROM (
 	SELECT DISTINCT BD.BOOK_CLASS_ID as [ClassID],BC.BOOK_CLASS_NAME as [ClassName],
 	DATEPART(YEAR,BLR.LEND_DATE) as [year],COUNT(*) AS Cnt
