@@ -1,0 +1,9 @@
+C:\Users\ASUS\source\repos\MVCWorkShop2\LB.Common\bin\Debug\LB.Common.dll
+C:\Users\ASUS\source\repos\MVCWorkShop2\LB.Common\bin\Debug\LB.Common.pdb
+C:\Users\ASUS\source\repos\MVCWorkShop2\LB.Common\obj\Debug\LB.Common.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\MVCWorkShop2\LB.Common\obj\Debug\LB.Common.dll
+C:\Users\ASUS\source\repos\MVCWorkShop2\LB.Common\obj\Debug\LB.Common.pdb
+C:\Users\ASUS\source\repos\MVCWorkShop2\LB.Common\obj\Debug\LB.Common.csprojAssemblyReference.cache
+C:\Users\ASUS\source\repos\MVCWorkShop2\LB.Common\bin\Debug\log4net.dll
+C:\Users\ASUS\source\repos\MVCWorkShop2\LB.Common\bin\Debug\log4net.xml
+C:\Users\ASUS\source\repos\MVCWorkShop2\LB.Common\obj\Debug\LB.Common.csproj.CopyComplete
