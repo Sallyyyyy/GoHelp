@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LB.Model
+{
+    public class LBBooks
+    {
+        public string BookId { get; set; }
+        [DisplayName("書籍類別id")]
+        public string BookClassId { get; set; }
+        [DisplayName("書籍類別")]
+        public string BookClassName { get; set; }
+        [DisplayName("書名")]
+        public string BookAuthor { get; set; }  
+        public string BookName { get; set; }
+        [DisplayName("購買日期")]
+        public string BoughtDate { get; set; }
+        [DisplayName("借閱狀態")]
+        public string BookStatus { get; set; }
+        [DisplayName("保管人")]
+        public string BookKeeper { get; set; }
+        [DisplayName("保管人名")]
+        public string BookKeeperName { get; set; }
+        [DisplayName("借閱狀態")]
+        public string BookStatusName { get; set; }
+        public string BookPublisher { get; set; }
+        public string BookNote { get; set; }
+    }
+}
