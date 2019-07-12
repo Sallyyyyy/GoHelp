@@ -42,6 +42,11 @@ namespace LB.Dao
             return result;
         }
 
+        public int DeleteBook(string viewresult)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<LBBooks> GetLibraryData(LBSearchArg viewresult)
         {
             var result = new List<LBBooks>();
@@ -62,6 +67,16 @@ namespace LB.Dao
         }
 
         public List<LBBooks> SearchBook(LBSearchArg viewresult)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Update(LBSearchArg viewresult)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<LBBooks> UpdateDetail(string data)
         {
             throw new NotImplementedException();
         }

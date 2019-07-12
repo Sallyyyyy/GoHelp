@@ -10,12 +10,13 @@ namespace MVCWorkShop2.Controllers
 {
     public class LibraryController : Controller
     {
-        private ILBService lbService { get; set; }
+        public ILBService lbService { get; set; }
         // GET: Library
         public ActionResult Index()
         {
             return View();
         }
+        //POST:Library
         [HttpPost]
         public JsonResult Index(LBSearchArg viewresult)
         {
@@ -54,7 +55,21 @@ namespace MVCWorkShop2.Controllers
         {
             return this.Json(lbService.InsertBook(insertData));
         }
-
+        [HttpPost]
+        public JsonResult Delete(string BookId)
+        {
+            return this.Json(lbService.DeleteBook(BookId));
+        }
+        [HttpPost]
+        public JsonResult UpdateDetail(string BookId)
+        {
+            List<LBBooks> bookList = lbService.UpdateDetail(BookId);
+            return this.Json(bookList);
+        }
+        public JsonResult Update(LBSearchArg BookId)
+        {
+            return this.Json(lbService.Update(BookId));
+        }
 
     }
 }

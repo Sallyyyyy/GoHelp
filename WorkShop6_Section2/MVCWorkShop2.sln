@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LB.Common", "LB.Common\LB.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCWorkShop2Tests", "MVCWorkShop2Tests\MVCWorkShop2Tests.csproj", "{C95D416D-3FC1-4C0D-96D5-A7CBDE74B13A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LB.DaoTests", "LB.DaoTests\LB.DaoTests.csproj", "{60C48CC8-469F-4A3A-8169-E9231C74BB9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LB.ServiceTests", "LB.ServiceTests\LB.ServiceTests.csproj", "{D9A3D972-2BC9-44CE-89CC-E1AD4E25172C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{C95D416D-3FC1-4C0D-96D5-A7CBDE74B13A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C95D416D-3FC1-4C0D-96D5-A7CBDE74B13A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C95D416D-3FC1-4C0D-96D5-A7CBDE74B13A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60C48CC8-469F-4A3A-8169-E9231C74BB9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60C48CC8-469F-4A3A-8169-E9231C74BB9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60C48CC8-469F-4A3A-8169-E9231C74BB9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60C48CC8-469F-4A3A-8169-E9231C74BB9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9A3D972-2BC9-44CE-89CC-E1AD4E25172C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9A3D972-2BC9-44CE-89CC-E1AD4E25172C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9A3D972-2BC9-44CE-89CC-E1AD4E25172C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9A3D972-2BC9-44CE-89CC-E1AD4E25172C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
