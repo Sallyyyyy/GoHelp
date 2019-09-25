@@ -1,104 +1,42 @@
-﻿@model LB.Model.LBSearchArg
+﻿
 @{
     ViewBag.Title = "Index";
 }
-<center> 
-<h2>查詢書籍</h2>
-<div class="container">
-    @using (Html.BeginForm("Index", "Library", FormMethod.Post, new { id = "BookForm" }))
-    {
-        <div class="col-md-10">
-            <input type="submit" value="查詢" class="k-button k-primary btn-add-book" id="search">
-            <input type="button" value="清除" class="btn btn-danger" id="clear">
-            <input type="button" value="新增" class="k-button k-primary btn-add-book" id="add_book"><br>
-        </div>
-        <div class="form-horizontal">
-            <div class="form-group">
-                @Html.LabelFor(model => model.BookName, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.BookName, new { @class = "form-control", id = "bookName" })
-                </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(model => model.BookClassName, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.BookClassName, new { @class = "form-control", id = "classNameDrop" })
-                </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(model => model.BookKeeper, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.BookKeeper, new { @class = "form-control", id = "bookKeeperDrop" })
-                </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(model => model.BookStatus, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.BookStatus, new { @class = "form-control", id = "bookStatusDrop" })
-                </div>
-            </div>
 
-        </div>
-    }
-<div id="showInsert">
-    @using (Html.BeginForm("Insert", "Library", FormMethod.Post, new { id = "InsertForm" ,style="display: none;"}))
-    {
-    <div class="form-horizontal">
-        @Html.LabelFor(model => model.BookId, htmlAttributes: new { @class = "control-label col-md-2", style = "display:none;" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.BookName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.BookName, new { @class = "form-control", id = "inBookName", required = "必填" })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.BookAuthor, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.BookAuthor, new { @class = "form-control", id = "bookAuthor", required = "必填" })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.Pubilsher, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.Pubilsher, new { @class = "form-control", id = "pubilsher", required = "必填" })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.BookIntroduce, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.BookIntroduce, new { @class = "form-control", id = "bookIntroduce", required = "必填" })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.BoughtDate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.BoughtDate, new { @class = "form-control", id = "boughtDate", required = "必填" })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.BookClassName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.BookClassName, new { @class = "form-control", id = "insertClassDrop", required = "必填" })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.BookStatus, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.BookStatus, new { @class = "form-control", id = "insertStatusDrop" })
-            </div>
-        </div>
-        <center><input type="submit" value="新增" class="k-button k-primary btn-add-book" id="insert_btn"></center>
+<div data-role="page" id="loginhome">
+    <div data-role="header" style="background-color:#FF8800;">
+        <a href="#left-menu" class="ui-btn ui-corner-all ui-shadow ui-icon-bullets ui-btn-icon-left" data-transition="flow" style="color:white;background-color:#FF8800;border-style:none;box-shadow:none;">更多</a>
+        <a href="#logout" class="ui-btn ui-corner-all ui-shadow ui-icon-user ui-btn-icon-left" data-transition="flow" style="color:white;background-color:#FF8800;border-style:none;box-shadow:none;">登出</a>
+        <h1 style="color:white;"><font face="Georgia">KuasBike</font></h1>
     </div>
-    }
-</div>
-    <div id="grid">
+
+    <div data-role="main" class="ui-content">
+        <div id="left-menu" data-role="panel" data-position="left" data-display="overlay">
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#history" style="color:white;background-color:#FF8800;">會員歷程總覽</a></li>
+                <li><a href="#description" style="color:white;background-color:#FF8800;">軟體使用說明</a></li>
+                <li><a href="#feedback" style="color:white;background-color:#FF8800;">意見與回饋</a></li>
+            </ul>
+        </div>
+        <div id="logindata"></div>
+        <div id="loginP1_D1"></div>
+        <div id="grid"></div>
     </div>
-    
+    <div data-role="footer" style="height: 130px;box-sizing: border-box;position: absolute;bottom: 0;width: 100%;background-color:#FF8800;">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#predict" style="color:white;background-color:#FF8800;height: 100px;line-height:100px;font-size: 18px;">路程規劃預測</a></li>
+                <li><a href="#Timerpage" style="color:white;background-color:#FF8800;height: 100px;line-height:100px;font-size: 18px;">計時計費功能</a></li>
+            </ul>
+            <div id="loginlocat"></div>
+        </div>
+    </div>
 </div>
-</center>
+
 <script type="text/javascript">
     $(document).ready(function () {
-         kendo.culture("zh-TW");
+        kendo.culture("zh-TW");
         //grid
         $.ajax({
             type: "POST",
@@ -135,8 +73,8 @@
                             field: "BookKeeper",
                             title: "保管人"
                         },
-                    { command: { text: "刪除", click: showDeleteDetail }, title: " ", width: "130px" }]
-                    });
+                        { command: { text: "刪除", click: showDeleteDetail }, title: " ", width: "130px" }]
+                });
             },
             error: function (error) {
                 console.log(error);
@@ -160,64 +98,64 @@
             return false;
         });
         //下拉式選單(類別名稱)
-            $.ajax({
-                type: "POST",
-                url: "/Library/ClassDropDown",
-                data: $("#BookForm").serialize(),
-                dataType: "json",
-                success: function (response) {
-                    $("#classNameDrop,#insertClassDrop").kendoDropDownList({
-                        dataSource: response,
-                        dataTextField: "BookClassName",
-                        dataValueField: "BookClassName",
-                        optionLabel: "請選擇..."
-                    });
-                    $("#insertClassDrop").kendoDropDownList({
-                        dataSource: response,
-                        dataTextField: "BookClassName",
-                        dataValueField: "BookClassId",
-                        optionLabel: "請選擇..."
-                    });
-                },
-                error: function (error) {
-                    console.log(error);
-                }
+        $.ajax({
+            type: "POST",
+            url: "/Library/ClassDropDown",
+            data: $("#BookForm").serialize(),
+            dataType: "json",
+            success: function (response) {
+                $("#classNameDrop,#insertClassDrop").kendoDropDownList({
+                    dataSource: response,
+                    dataTextField: "BookClassName",
+                    dataValueField: "BookClassName",
+                    optionLabel: "請選擇..."
+                });
+                $("#insertClassDrop").kendoDropDownList({
+                    dataSource: response,
+                    dataTextField: "BookClassName",
+                    dataValueField: "BookClassId",
+                    optionLabel: "請選擇..."
+                });
+            },
+            error: function (error) {
+                console.log(error);
+            }
         });
         //下拉式選單(狀態)
-            $.ajax({
-                type: "POST",
-                url: "/Library/StatusDropDown",
-                data: $("#BookForm").serialize(),
-                dataType: "json",
-                success: function (response) {
-                    $("#bookStatusDrop,#insertStatusDrop").kendoDropDownList({
-                        dataSource: response,
-                        dataTextField: "BookStatusName",
-                        dataValueField: "BookStatus",
-                        optionLabel: "請選擇..."
-                    });
-                },
-                error: function (error) {
-                    console.log(error);
-                }
-            });
+        $.ajax({
+            type: "POST",
+            url: "/Library/StatusDropDown",
+            data: $("#BookForm").serialize(),
+            dataType: "json",
+            success: function (response) {
+                $("#bookStatusDrop,#insertStatusDrop").kendoDropDownList({
+                    dataSource: response,
+                    dataTextField: "BookStatusName",
+                    dataValueField: "BookStatus",
+                    optionLabel: "請選擇..."
+                });
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
         //下拉式選單(借閱人)
-            $.ajax({
-                type: "POST",
-                url: "/Library/KeeperDropDown",
-                data: $("#BookForm").serialize(),
-                dataType: "json",
-                success: function (response) {
-                    $("#bookKeeperDrop").kendoDropDownList({
-                        dataSource: response,
-                        dataTextField: "BookKeeperName",
-                        dataValueField: "BookKeeperName",
-                        optionLabel: "請選擇..."
-                    });
-                },
-                error: function (error) {
-                    console.log(error);
-                }
+        $.ajax({
+            type: "POST",
+            url: "/Library/KeeperDropDown",
+            data: $("#BookForm").serialize(),
+            dataType: "json",
+            success: function (response) {
+                $("#bookKeeperDrop").kendoDropDownList({
+                    dataSource: response,
+                    dataTextField: "BookKeeperName",
+                    dataValueField: "BookKeeperName",
+                    optionLabel: "請選擇..."
+                });
+            },
+            error: function (error) {
+                console.log(error);
+            }
         });
         //清除表單按鈕
         $("#clear").click(function () {
@@ -236,44 +174,44 @@
             $("#insertStatusDrop").data("kendoDropDownList").enable();
         });
         $("#boughtDate").kendoDatePicker({
-        format: "yyyy-MM-dd",
-        parseFormats: ["yyyy/MM/dd", "yyyyMMdd"],
-        dateInput: true
-         });
+            format: "yyyy-MM-dd",
+            parseFormats: ["yyyy/MM/dd", "yyyyMMdd"],
+            dateInput: true
+        });
         //驗證
         var validator = $("#book_form").kendoValidator({
-          messages: {
-            required: "此欄位為必填"
-           }
+            messages: {
+                required: "此欄位為必填"
+            }
         }).data("kendoValidator");
         //Insert
         $("#insert_btn").click(function () {
             //不曉得為何加了判斷認證就會跳轉頁面
-           //if (validator.validate()) {
-                $.ajax({
-                    type: "POST",
-                    url: "/Library/Insert",
-                    data: $("#InsertForm").serialize(),
-                    dataType: "json",
-                    success: function (response) {
-                        console.log("insert");
-                        alert("新增成功");
-                        $("#showInsert").data("kendoWindow").close();
-                        var grid = $('#grid').data("kendoGrid");
-                        grid.refresh();
-                    },
-                    error: function (error) {
-                        console.log(error);
-                    }
-                });
-                return false;
+            //if (validator.validate()) {
+            $.ajax({
+                type: "POST",
+                url: "/Library/Insert",
+                data: $("#InsertForm").serialize(),
+                dataType: "json",
+                success: function (response) {
+                    console.log("insert");
+                    alert("新增成功");
+                    $("#showInsert").data("kendoWindow").close();
+                    var grid = $('#grid').data("kendoGrid");
+                    grid.refresh();
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+            return false;
             //}
         });
-        
+
         //刪除
-            function showDeleteDetail() {
-                console.log("showDeleteDetail");
-            }
-        });
+        function showDeleteDetail() {
+            console.log("showDeleteDetail");
+        }
+    });
 
 </script>

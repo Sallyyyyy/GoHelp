@@ -4,3 +4,9 @@ C:\Users\ASUS\source\repos\MVCWorkShop2\LB.Model\obj\Debug\LB.Model.csprojAssemb
 C:\Users\ASUS\source\repos\MVCWorkShop2\LB.Model\obj\Debug\LB.Model.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\source\repos\MVCWorkShop2\LB.Model\obj\Debug\LB.Model.dll
 C:\Users\ASUS\source\repos\MVCWorkShop2\LB.Model\obj\Debug\LB.Model.pdb
+C:\Users\ASUS\Documents\sally\WorkShop6_Section1\LB.Model\bin\Debug\LB.Model.dll
+C:\Users\ASUS\Documents\sally\WorkShop6_Section1\LB.Model\bin\Debug\LB.Model.pdb
+C:\Users\ASUS\Documents\sally\WorkShop6_Section1\LB.Model\obj\Debug\LB.Model.csprojAssemblyReference.cache
+C:\Users\ASUS\Documents\sally\WorkShop6_Section1\LB.Model\obj\Debug\LB.Model.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Documents\sally\WorkShop6_Section1\LB.Model\obj\Debug\LB.Model.dll
+C:\Users\ASUS\Documents\sally\WorkShop6_Section1\LB.Model\obj\Debug\LB.Model.pdb
