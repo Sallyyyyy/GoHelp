@@ -12,36 +12,40 @@ namespace LB.Service
     {
         private ILBDao lbDao { get; set; }
         //載入畫面時GET書籍資料放到kendoGrid
-        public List<LBBooks> GetLibraryData(LBSearchArg viewresult)
+        public List<GHPost> GetLibraryData(LBSearchArg viewresult)
         {
             return lbDao.GetLibraryData(viewresult);
         }
-        //查詢書籍
-        public List<LB.Model.LBBooks> SearchBook(LBSearchArg viewresult)
+        public int Insert(LBSearchArg viewresult)
         {
-            return lbDao.SearchBook(viewresult);
+            return lbDao.Insert(viewresult);
         }
-        //新增書籍
-        public int InsertBook(LBSearchArg viewresult)
-        {
-            return lbDao.InsertBook(viewresult);
-        }
-        //取得下拉式資料
-        //類別名稱
-        public List<LBBooks> BookClassDrop()
-        {
-            return lbDao.BookClassDrop();
-        }
-        //借閱狀態下拉式
-        public List<LBBooks> BookStatusDrop()
-        {
-            return lbDao.BookStatusDrop();
-        }
-        //借閱人下拉式
-        public List<LBBooks> BookKeeperDrop()
-        {
-            return lbDao.BookKeeperDrop();
-        }
+        ////查詢書籍
+        //public List<LB.Model.LBBooks> SearchBook(LBSearchArg viewresult)
+        //{
+        //    return lbDao.SearchBook(viewresult);
+        //}
+        ////新增書籍
+        //public int InsertBook(LBSearchArg viewresult)
+        //{
+        //    return lbDao.InsertBook(viewresult);
+        //}
+        ////取得下拉式資料
+        ////類別名稱
+        //public List<LBBooks> BookClassDrop()
+        //{
+        //    return lbDao.BookClassDrop();
+        //}
+        ////借閱狀態下拉式
+        //public List<LBBooks> BookStatusDrop()
+        //{
+        //    return lbDao.BookStatusDrop();
+        //}
+        ////借閱人下拉式
+        //public List<LBBooks> BookKeeperDrop()
+        //{
+        //    return lbDao.BookKeeperDrop();
+        //}
     }
 }
 

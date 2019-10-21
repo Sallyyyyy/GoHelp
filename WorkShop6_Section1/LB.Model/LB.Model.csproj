@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="GHPost.cs" />
     <Compile Include="LBBooks.cs" />
     <Compile Include="LBSearchArg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

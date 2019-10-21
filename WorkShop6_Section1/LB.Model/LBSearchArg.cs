@@ -9,23 +9,23 @@ namespace LB.Model
 {
     public class LBSearchArg
     {
-        [DisplayName("書籍編號")]
-        public string BookId { get; set; }
-        [DisplayName("書名")]
-        public string BookName { get; set; }
-        [DisplayName("書籍類別")]
-        public string BookClassName { get; set; }
-        [DisplayName("借閱人")]
-        public string BookKeeper { get; set; }
-        [DisplayName("借閱狀態")]
-        public string BookStatus { get; set; }
-        [DisplayName("作者")]
-        public string BookAuthor { get; set; }
-        [DisplayName("出版社")]
-        public string Pubilsher { get; set; }
-        [DisplayName("簡介")]
-        public string BookIntroduce { get; set; }
-        [DisplayName("購買日期")]
-        public string BoughtDate { get; set; }
+        [DisplayName("貼文編號")]
+        public string PostID { get; set; }
+        [DisplayName("貼文標題")]
+        public string PostTitle { get; set; }
+        [DisplayName("貼文內容")]
+        public string PostContent { get; set; }
+        [DisplayName("種類")]
+        public string Kind { get; set; }
+        [DisplayName("會面地址")]
+        public string MeetAddress { get; set; }
+        [DisplayName("開始時間")]
+        public string StartTime { get; set; }
+        [DisplayName("結束時間")]
+        public string EndTime { get; set; }
+        [DisplayName("使用者")]
+        public string UserID { get; set; }
+        [DisplayName("暱稱")]
+        public string Nickname { get; set; }
     }
 }

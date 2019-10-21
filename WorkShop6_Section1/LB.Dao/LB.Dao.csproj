@@ -54,7 +54,6 @@
     <Compile Include="Class1.cs" />
     <Compile Include="ILBDao.cs" />
     <Compile Include="LBDao.cs" />
-    <Compile Include="LBTestDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

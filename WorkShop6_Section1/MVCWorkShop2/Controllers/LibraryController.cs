@@ -19,41 +19,43 @@ namespace MVCWorkShop2.Controllers
         [HttpPost]
         public JsonResult Index(LBSearchArg viewresult)
         {
-            List<LBBooks> bookList = lbService.GetLibraryData(viewresult);
+            List<GHPost> bookList = lbService.GetLibraryData(viewresult);
             return this.Json(bookList);
         }
-        //查詢書籍
         [HttpPost]
-        public JsonResult Search(LBSearchArg viewresult)
+        public JsonResult Insert(string insertData)
         {
-            List<LBBooks> bookList = lbService.SearchBook(viewresult);
-            return this.Json(bookList);
+            LBSearchArg viewresult = new LBSearchArg();
+            return this.Json(lbService.Insert(viewresult));
         }
-        //類別下拉式選單
-        [HttpPost]
-        public JsonResult ClassDropDown()
-        {
-            List<LBBooks> bookClassList = lbService.BookClassDrop();
-            return this.Json(bookClassList);
-        }
-        //類別下拉式選單
-        [HttpPost]
-        public JsonResult StatusDropDown()
-        {
-            List<LBBooks> bookClassList = lbService.BookStatusDrop();
-            return this.Json(bookClassList);
-        }
-        [HttpPost]
-        public JsonResult KeeperDropDown()
-        {
-            List<LBBooks> bookClassList = lbService.BookKeeperDrop();
-            return this.Json(bookClassList);
-        }
-        [HttpPost]
-        public JsonResult Insert(LBSearchArg insertData)
-        {
-            return this.Json(lbService.InsertBook(insertData));
-        }
+        ////查詢書籍
+        //[HttpPost]
+        //public JsonResult Search(LBSearchArg viewresult)
+        //{
+        //    List<LBBooks> bookList = lbService.SearchBook(viewresult);
+        //    return this.Json(bookList);
+        //}
+        ////類別下拉式選單
+        //[HttpPost]
+        //public JsonResult ClassDropDown()
+        //{
+        //    List<LBBooks> bookClassList = lbService.BookClassDrop();
+        //    return this.Json(bookClassList);
+        //}
+        ////類別下拉式選單
+        //[HttpPost]
+        //public JsonResult StatusDropDown()
+        //{
+        //    List<LBBooks> bookClassList = lbService.BookStatusDrop();
+        //    return this.Json(bookClassList);
+        //}
+        //[HttpPost]
+        //public JsonResult KeeperDropDown()
+        //{
+        //    List<LBBooks> bookClassList = lbService.BookKeeperDrop();
+        //    return this.Json(bookClassList);
+        //}
+
 
 
     }

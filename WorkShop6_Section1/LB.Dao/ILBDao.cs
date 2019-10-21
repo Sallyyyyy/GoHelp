@@ -5,11 +5,11 @@ namespace LB.Dao
 {
     public interface ILBDao
     {
-        List<LBBooks> BookClassDrop();
-        List<LBBooks> BookKeeperDrop();
-        List<LBBooks> BookStatusDrop();
-        List<LBBooks> GetLibraryData(LBSearchArg viewresult);
-        int InsertBook(LBSearchArg viewresult);
-        List<LBBooks> SearchBook(LBSearchArg viewresult);
+        //List<LBBooks> BookClassDrop();
+        //List<LBBooks> BookKeeperDrop();
+        //List<LBBooks> BookStatusDrop();
+        List<GHPost> GetLibraryData(LBSearchArg viewresult);
+        int Insert(LBSearchArg viewresult);
+        //List<LBBooks> SearchBook(LBSearchArg viewresult);
     }
 }
