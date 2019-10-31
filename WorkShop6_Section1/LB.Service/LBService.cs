@@ -20,6 +20,37 @@ namespace LB.Service
         {
             return lbDao.Insert(viewresult);
         }
+        public Boolean Login(Login viewresult)
+        {
+            return lbDao.Login(viewresult);
+        }
+        public int SignUp(User viewresult)
+        {
+            return lbDao.SignUp(viewresult);
+        }
+        public List<GHHistory> GetHistoryData(string userId)
+        {
+            return lbDao.GetHistoryData(userId);
+        }
+
+        public List<GHRank> GetRankData()
+        {
+            return lbDao.GetRankData();
+        }
+
+        public List<GHMyHelp> GetMyHelpData(string userId)
+        {
+            return lbDao.GetMyHelpData(userId);
+        }
+
+        public List<GHUdata> GetUdata(string userId)
+        {
+            return lbDao.GetUdata(userId);
+        }
+        public List<GHPost> GetTypeArgData(string type)
+        {
+            return lbDao.GetTypeArgData(type);
+        }
         ////查詢書籍
         //public List<LB.Model.LBBooks> SearchBook(LBSearchArg viewresult)
         //{

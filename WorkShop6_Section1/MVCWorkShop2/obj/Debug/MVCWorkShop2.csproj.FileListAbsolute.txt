@@ -214,3 +214,4 @@ C:\Users\ASUS\Documents\sally\WorkShop6_Section1\MVCWorkShop2\obj\Debug\MVCWorkS
 C:\Users\ASUS\Documents\sally\WorkShop6_Section1\MVCWorkShop2\obj\Debug\MVCWorkShop2.csproj.CopyComplete
 C:\Users\ASUS\Documents\sally\WorkShop6_Section1\MVCWorkShop2\obj\Debug\MVCWorkShop2.dll
 C:\Users\ASUS\Documents\sally\WorkShop6_Section1\MVCWorkShop2\obj\Debug\MVCWorkShop2.pdb
+C:\Users\ASUS\Documents\sally\WorkShop6_Section1\MVCWorkShop2\bin\FiftyOne.Foundation.dll

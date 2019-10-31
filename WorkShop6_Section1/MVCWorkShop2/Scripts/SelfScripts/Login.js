@@ -61,7 +61,8 @@ function onSignIn(googleUser) {
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
     var name = profile.getName();
     if (name != null) {
-        document.getElementById('test').innerHTML += '<br>Hi!' + profile.getName() + '<br><input type="button" class="btn btn-primary" style="font-family: Microsoft JhengHei;" value="點我進入" name="btn" onclick=location.href="http://fs.mis.kuas.edu.tw/~s1105137240/project/homepage.html">';
+        $("#userId").val(profile.getId());
+        window.location.href = "#home";
     } else {
         console.log("fail");
     }

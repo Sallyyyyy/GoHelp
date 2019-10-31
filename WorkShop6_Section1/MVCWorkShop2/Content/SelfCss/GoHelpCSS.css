@@ -1,16 +1,67 @@
 ﻿body {
     font-size: 1.4rem;
+    font-family: Microsoft JhengHei;
+    background-color:white;
 }
+
 html {
     touch-action: pan-y;
 }
+
 h1 {
     color: #E2943B;
 }
+.form-control {
+    height: 46px;
+    border: none;
+    background: #f7f7f7;
+    width: 100%;
+    padding: 0 25px;
+    border-radius: 23px;
+    color: #333;
+}
+.PContent {
+    font-size: 1.2rem;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid cornflowerblue;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+    .form-control::-webkit-input-placeholder {
+        color: #808080;
+        text-transform: uppercase;
+    }
+
+    .form-control::-moz-placeholder {
+        color: #808080;
+        text-transform: uppercase;
+    }
+
+    .form-control::-ms-input-placeholder {
+        color: #808080;
+        text-transform: uppercase;
+    }
+
+    .form-control::-moz-placeholder {
+        color: #808080;
+        text-transform: uppercase;
+    }
+
 #setting {
     margin: 0;
     padding: 0;
     height: 75%;
+}
+
+input::-webkit-input-placeholder {
+    font-family: Microsoft JhengHei;
 }
 
 .ui-content {
@@ -76,22 +127,22 @@ h1 {
     z-index: 999;
 }
 
-    .filter-btn a {
-        position: absolute;
-        line-height: 40px;
-        text-align: center;
-        right: 25px;
-        display: block;
-        top: -46px;
-        color: #a6c67c;
-        z-index: 99;
-        font-size: 22px;
-        transition: all .4s cubic-bezier(.68, 1, .265, 1)
-    }
+.filter-btn a {
+    position: absolute;
+    line-height: 40px;
+    text-align: center;
+    right: 25px;
+    display: block;
+    top: -46px;
+    color: #a6c67c;
+    z-index: 99;
+    font-size: 22px;
+    transition: all .4s cubic-bezier(.68, 1, .265, 1)
+}
 
 .open:after {
     transform: scale(1);
-    background-color:aquamarine;
+    background-color: aquamarine;
 }
 
 .filter-btn.open a:nth-child(1) {
@@ -101,6 +152,7 @@ h1 {
 .filter-btn.open a:nth-child(2) {
     transform: translate(-50px, -34px);
 }
+
 a {
     color: #aaaaaa;
     transition: all ease-in-out 200ms;

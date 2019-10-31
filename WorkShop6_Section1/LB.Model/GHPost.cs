@@ -10,7 +10,7 @@ namespace LB.Model
     public class GHPost
     {
         [DisplayName("貼文編號")]
-        public string PostID { get; set; }
+        public int PostID { get; set; }
         [DisplayName("貼文標題")]
         public string PostTitle { get; set; }
         [DisplayName("貼文內容")]
@@ -27,5 +27,15 @@ namespace LB.Model
         public string UserID { get; set; }
         [DisplayName("暱稱")]
         public string Nickname { get; set; }
+        [DisplayName("幫助者")]
+        public string HelpUserID { get; set; }
+        [DisplayName("狀態")]
+        public string  Status { get; set; }
+        [DisplayName("緯度")]
+        public float PostLat { get; set; }
+        [DisplayName("經度")]
+        public float PostLong { get; set; }
+        [DisplayName("縣市")]
+        public string City { get; set; }
     }
 }

@@ -27,5 +27,12 @@ namespace LB.Model
         public string UserID { get; set; }
         [DisplayName("暱稱")]
         public string Nickname { get; set; }
+        public string Status { get; set; }
+        [DisplayName("緯度")]
+        public float PostLat { get; set; }
+        [DisplayName("經度")]
+        public float PostLong { get; set; }
+        [DisplayName("縣市")]
+        public string City { get; set; }
     }
 }

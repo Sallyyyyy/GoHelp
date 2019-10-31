@@ -23,10 +23,52 @@ namespace MVCWorkShop2.Controllers
             return this.Json(bookList);
         }
         [HttpPost]
-        public JsonResult Insert(string insertData)
+        public JsonResult InsertPost(LBSearchArg insertData)
         {
-            LBSearchArg viewresult = new LBSearchArg();
-            return this.Json(lbService.Insert(viewresult));
+            return this.Json(lbService.Insert(insertData));
+        }
+        [HttpPost]
+        public JsonResult Login(Login login)
+        {
+            return this.Json(lbService.Login(login));
+        }
+        [HttpPost]
+        public JsonResult SignUp(User data)
+        {
+            return this.Json(lbService.SignUp(data));
+        }
+        [HttpPost]
+        public JsonResult History(string userId)
+        {
+            List<GHHistory> HistoryList = lbService.GetHistoryData(userId);
+            return this.Json(HistoryList);
+        }
+
+        [HttpPost]
+        public JsonResult Rank()
+        {
+            List<GHRank> RankList = lbService.GetRankData();
+            return this.Json(RankList);
+        }
+
+        [HttpPost]
+        public JsonResult MyHelp(string userId)
+        {
+            List<GHMyHelp> MyHelpList = lbService.GetMyHelpData(userId);
+            return this.Json(MyHelpList);
+        }
+
+        [HttpPost]
+        public JsonResult Udata(string userId)
+        {
+            List<GHUdata> UdataList = lbService.GetUdata(userId);
+            return this.Json(UdataList);
+        }
+        [HttpPost]
+        public JsonResult ChangeType(string type)
+        {
+            List<GHPost> TypeArgdataList = lbService.GetTypeArgData(type);
+            return this.Json(TypeArgdataList);
         }
         ////查詢書籍
         //[HttpPost]

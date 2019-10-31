@@ -42,10 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="GHHistory.cs" />
+    <Compile Include="GHMyHelp.cs" />
+    <Compile Include="GHRank.cs" />
+    <Compile Include="GHTypeArg.cs" />
+    <Compile Include="GHUdata.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="GHPost.cs" />
     <Compile Include="LBBooks.cs" />
     <Compile Include="LBSearchArg.cs" />
+    <Compile Include="Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
